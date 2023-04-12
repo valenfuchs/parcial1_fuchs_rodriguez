@@ -1,4 +1,4 @@
-d3.dsv(';','147_15-21_junio.csv', d3.autoType).then(data => {
+d3.dsv(';','/data/147_15-21_junio.csv', d3.autoType).then(data => {
 
 let dataFiltered = []
 
@@ -12,24 +12,37 @@ let dataFiltered = []
       cant: d[1].length,
     }
   })
-
-
-    console.log(data)
-
-  console.log('data', data)
   
     let chart = Plot.plot({
       marks: [
         Plot.barY(data, 
           {
             x: 'prestacion',
-            y: "cant"
-//          fill: d => (d.prestacion == 'VEHÍCULO MAL ESTACIONADO' ? 'rgb(255, 128, 0)' :  '#cfcfcf'),
-
-          //sort: { x: 'x', limit: 10}
+            y: "cant",
+            fill: d => (d.prestacion == 'VEHÍCULO MAL ESTACIONADO' ? '#810f7c' :  '#b3cde3'),
           },
         ),
     ],
+    x: {
+      labelOffset: 50,
+      insetRight: 10,
+      label: 'Cantidad de Reclamos',
+    },
+    y: {
+      tickFormat: 'd',
+      label: null,
+    },
+    style:{
+      fontFamily: 'Tahoma',
+      fontSize: 14,
+      color:'black', 
+      padding: '10px',
+    },
+
+    width: 700,
+    height: 400,
+    marginLeft: 80,
+
     })
 
     d3.select('#chart').append(() => chart)
