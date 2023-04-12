@@ -25,7 +25,7 @@ let dataFiltered = []
     ],
     x: {
       labelOffset: 50,
-      insetRight: 10,
+      insetRight: 30,
       label: 'Cantidad de Reclamos',
     },
     y: {
