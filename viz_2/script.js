@@ -1,25 +1,33 @@
 const mapaFetch = d3.json('barrios-caba.geojson')
 const dataFetch = d3.dsv(';', '147_vehiculos_mal_estacionados.csv', d3.autoType)
 
+
 Promise.all([mapaFetch, dataFetch]).then(([barrios, data]) => {
   
-  /* Agrupamos reclamos x barrio */
-  const reclamosPorBarrio = d3.group(data, d => d.domicilio_barrio) // crea un Map
+  const reclamosPorBarrio = d3.group(data, d => d.domicilio_barrio) // creamos un map
   console.log('reclamosPorBarrio', reclamosPorBarrio)
+   
+   /* A cada feature del mapa le agregamos la prop DENUNCIAS */
+   barrios.features.forEach(d => {
+     let nombreBarrio = d.properties.BARRIO
+     let cantReclamos =  reclamosPorBarrio.get(nombreBarrio).length
+     d.properties.DENUNCIAS = cantReclamos
+ 
+     console.log(nombreBarrio + ': ' + cantReclamos)
+   })
   
-  /* Mapa Coroplético */
+
   let chartMap = Plot.plot({
-    // https://github.com/observablehq/plot#projection-options
     projection: {
       type: 'mercator',
-      domain: barrios, // Objeto GeoJson a encuadrar
+      domain: barrios,
     },
     color: {
       // Quantize continuo (cant. denuncias) -> discreto (cant. colores)
       type: 'quantize', 
-      n: 10,
-      scheme: 'ylorbr',
-      label: 'Cantidad de denuncias',
+      n: 5,
+      scheme: 'bupu',
+      label: 'Cantidad de denuncias por autos mal estacionados',
       legend: true,
     },
     marks: [
@@ -32,6 +40,19 @@ Promise.all([mapaFetch, dataFetch]).then(([barrios, data]) => {
         stroke: '#ccc',
         title: d => `${d.properties.BARRIO}\n${d.properties.DENUNCIAS} denuncias`,
       }),
+      Plot.text(
+        barrios.features,
+        Plot.centroid({
+          text: (d) => d.properties.BARRIO,
+          textAnchor: "center",
+          dx: 4,
+          filter: (d) => d.properties.DENUNCIAS > 600,
+          fill: 'white',
+          fontSize: d => (d.properties.BARRIO == "PALERMO" ? '16px' :  '11px'),
+          fontWeight: d => (d.properties.BARRIO == 'PALERMO' ? 'bold': 'normal'),
+          //fontWeight: 'bold',
+        })
+      )
     ],
   })
 
