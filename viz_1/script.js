@@ -8,7 +8,6 @@ d3.dsv(';','147_15-21_junio.csv', d3.autoType).then(data => {
           {x: 'prestacion',
           fill: d => (d.prestacion == 'VEHÍCULO MAL ESTACIONADO' ? 'rgb(255, 128, 0)' :  '#cfcfcf'),
           sort: { x: 'x', limit: 10}
-          //thresholds: 10,
           }),
         ),
         
