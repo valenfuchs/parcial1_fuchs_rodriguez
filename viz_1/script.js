@@ -6,8 +6,11 @@ d3.dsv(';','147_15-21_junio.csv', d3.autoType).then(data => {
       marks: [
         Plot.barY(data, Plot.groupX({y: 'count'},
           {x: 'prestacion',
-          fill: d => (d.prestacion == 'Vehículo mal estacionado' ? 'rgb(255, 128, 0)' :  '#cfcfcf')},
-        )),
+          fill: d => (d.prestacion == 'VEHÍCULO MAL ESTACIONADO' ? 'rgb(255, 128, 0)' :  '#cfcfcf'),
+          sort: { x: 'x', limit: 10}
+          //thresholds: 10,
+          }),
+        ),
         
     ],
 
