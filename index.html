@@ -6,86 +6,56 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>TP 2- Visualización de datos</title>
     <style>
-    /*
-      .header {
-        overflow: hidden;
-        position: relative;
-      }
 
-      .foto {
-        position: absolute;
-        left: 0;
-        top: 0;
-        width: 100%;
-        height: auto;
-      }
-      
-      .titulo {
-        position: relative;
-      }
-      */
-      body { 
-      background-image: url('background_img.jpg');
-      background-size: cover;
-      background-repeat:no-repeat;
-      height: 30vh;
-      }
+      .box {        
+          border: 1px solid rgb(107, 110, 107);
+      }      
 
-      
-      .box {
-          padding: 10px;          
-          background-color:rgb(0, 0, 0);
-          margin-left: 30%;
-          margin-right: 30%;
-      }
-
-      h1 {
+      p#clima {
         font-family: 'Tahoma', sans-serif;
-        text-align: center;
-        font-size: 50px;
-        color: rgb(255, 255, 255);
-      }
-
-      h3 {
-        font-family: 'Tahoma', sans-serif;
-        text-align: center;
-        font-size: 20px;
-        color: rgb(255, 255, 255);
-        margin-top: 60px;
-        font-weight: 100;
-      }  
-      p {
-        font-family: 'Tahoma', sans-serif;
-        text-align: center;
         font-size: 15px;
         color: rgb(0, 0, 0);
-        margin-top: 60px;
-      }  
+        position: absolute;
+        margin: 9px;
+      }
+      p#fecha {
+        font-family: 'Tahoma', sans-serif;
+        font-size: 15px;
+        color: rgb(0, 0, 0);
+        
+        margin: 9px;
+        text-align: right;
+      }
+
+      p#nombre {
+        font-family: myFirstFont;
+        text-align: center;
+        font-size: 50px;
+        color: rgb(0, 0, 0);
+        margin: 10px;
+        margin-top: -20px;
+      }
+      p#click {
+        font-family: nyt-cheltenham;
+        font-size: 30px;
+        color: rgb(0, 0, 0);
+      }
+
+      @font-face {
+      font-family: myFirstFont;
+      src: url('Ancient Medium.ttf');
+    }
       
         </style>
   </head>
 
   <body>
-  <!--
-    <div class="header"> 
-      <img
-        class="foto"
-        src="background_img.jpg"
-        alt=""
-      >
-      <div class="titulo">
-        <h1>Titulo Autos</h1>
-      </div> 
-    </div>
-    --> 
-    
-    
-    <div class="box">
-      <h1>Titulo Autos</h1>
-      <h2></h2>
-      <h3> por Valentina Fuchs & Milagros Rodriguez Ventura </h3>
-      <p>Hay muchos autos mal estacionados 
-      <br>emmmm</p>
+
+    <div class = "box">
+      <p id="clima">⛅ 15.7º</id> 
+      <p id="fecha">Martes, 25 de Abril de 2023</id> 
+      <p id="nombre">The Valen & Mili Times</id> 
+      
     </div>
 
     

@@ -1,6 +1,5 @@
 d3.dsv(';','/data/147_15-21_junio.csv', d3.autoType).then(data => {
 
-let dataFiltered = []
 
   data = d3.groups(data, d => d.prestacion)
     .filter(d => d[1].length >= 300)
