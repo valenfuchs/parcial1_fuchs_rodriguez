@@ -12,15 +12,15 @@
       }      
 
       p#clima {
-        font-family: 'Tahoma', sans-serif;
+        font-family: "arial";
         font-size: 15px;
         color: rgb(0, 0, 0);
         position: absolute;
         margin: 9px;
       }
       p#fecha {
-        font-family: 'Tahoma', sans-serif;
-        font-size: 15px;
+        font-family: "arial";
+        font-size: 14px;
         color: rgb(0, 0, 0);
         
         margin: 9px;
@@ -40,6 +40,17 @@
         font-size: 30px;
         color: rgb(0, 0, 0);
       }
+      
+      p {
+        font-family: font_italic;
+        font-size: 30px;
+        color: rgb(0, 0, 0);
+      }
+      p#clicks {
+        font-family: font_bold_italic;
+        font-size: 30px;
+        color: rgb(0, 0, 0);
+      }
 
       @font-face {
       font-family: font_title;
@@ -49,11 +60,23 @@
       font-family: font_body;
       src: url('Cheltenham BT.ttf');
     }
+      @font-face {
+      font-family: font_italic;
+      src: url('Cheltenhm BT Italic.ttf');
+    }
+      @font-face {
+      font-family: font_bold_italic;
+      src: url('Cheltenham Bold Italic Headline BT.ttf');
+    }
+     
+    
       
         </style>
   </head>
 
   <body>
+
+    <link href="https://www.dafontfree.net/embed/Y2hlbHRlbmhtLWJ0LWJvbGQtaXRhbGljJmRhdGEvMjMvYy8xMTgyNTcvQ2hlbHRlbmhhbUJvbGRJdGFsaWNCVC50dGY" rel="stylesheet" type="text/css"/>
 
     <div class = "box">
       <p id="clima">⛅ 15.7º</id> 
@@ -64,6 +87,8 @@
 
     
     <p id = 'click'>capaz podemos hacer un indice que te lleve abajo a ver cada uno? sino yafu</p>
-
+    <p>capaz podemos hacer un indice que te lleve abajo a ver cada uno? sino yafu</p>
+    <p id = 'clicks'></p>capaz podemos hacer un indice que te lleve abajo a ver cada uno? sino yafu</p>
+    
   </body>
 </html>
