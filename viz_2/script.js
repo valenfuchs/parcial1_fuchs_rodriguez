@@ -53,6 +53,12 @@ Promise.all([mapaFetch, dataFetch]).then(([barrios, data]) => {
         })
       )
     ],
+    style:{
+      fontFamily: 'Tahoma',
+      fontSize: 14,
+      color:'black', 
+      padding: '10px',
+    },
   })
 
   d3.select('#chart').append(() => chartMap)

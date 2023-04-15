@@ -17,7 +17,8 @@ d3.dsv(';','/data/147_15-21_junio.csv', d3.autoType).then(data => {
         Plot.barX(data, 
           { x: 'cant',
             y: "prestacion",
-            fill: d => (d.prestacion == 'VEHÍCULO MAL ESTACIONADO' ? '#810f7c' :  '#ced9db'),
+            fill: d => (d.prestacion == 'VEHÍCULO MAL ESTACIONADO' ? '#701C7F' :  '#B9B7B9'),
+            opacity: d => (d.prestacion == 'VEHÍCULO MAL ESTACIONADO' ? 1 :  0.6),
             sort: {y: "x", reverse: true}
           },
         ), 
@@ -25,13 +26,14 @@ d3.dsv(';','/data/147_15-21_junio.csv', d3.autoType).then(data => {
 
     x: {
       tickFormat: 'd',
-          label: 'Cantidad de Reclamos',
-          labelOffset: 50,
-          grid: true
+      label: 'Cantidad de Reclamos',
+      labelOffset: 50,
+      grid: true
     },
 
     y: {
-      label: null
+      label: null,
+      tickFormat: d => d.charAt(0).toUpperCase() + d.slice(1).toLowerCase(),
     },
    
     style:{
