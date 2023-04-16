@@ -1,48 +1,57 @@
 
       .box {        
-          border: 1px solid rgb(107, 110, 107);
+          border: 1px solid rgb(255, 255, 255);
+          background-color: rgba(237, 237, 237, 0.575);
       }      
 
       p#clima {
-        font-family: "arial";
+        font-family: font_imperial;
         font-size: 15px;
         color: rgb(0, 0, 0);
         position: absolute;
         margin: 9px;
       }
       p#fecha {
-        font-family: "arial";
-        font-size: 14px;
+        font-family: font_imperial;
+        font-size: 15px;
         color: rgb(0, 0, 0);
         
         margin: 9px;
         text-align: right;
       }
-
       p#nombre {
         font-family: font_title;
         text-align: center;
-        font-size: 50px;
+        font-size: 45px;
         color: rgb(0, 0, 0);
         margin: 10px;
         margin-top: -20px;
       }
-      p#click {
-        font-family: font_body;
-        font-size: 30px;
+      p#titulo {
+        margin-top: 60px;
+        font-family: font_bold_italic;
+        font-size: 40px;
         color: rgb(0, 0, 0);
+        text-align: center;
       }
-      
-      p {
+
+      .subtitulo {
         font-family: font_italic;
         font-size: 30px;
         color: rgb(0, 0, 0);
+        text-align: center;
+        margin-top: 20px;
       }
-      p#clicks {
-        font-family: font_bold_italic;
-        font-size: 30px;
+
+      .cuerpo {
+        font-family: font_imperial;
+        font-size: 20px;
         color: rgb(0, 0, 0);
+        text-align: center;
+        margin-top: 20px;
       }
+
+      
 
       @font-face {
       font-family: font_title;
@@ -60,10 +69,11 @@
       font-family: font_bold_italic;
       src: url('/tipografias/Cheltenham Bold Italic Headline BT.ttf');
     }
-
-    #chart_1{
-      overflow-y:auto;
+      @font-face {
+      font-family: font_imperial;
+      src: url('/tipografias/Imperial Regular.otf');
     }
+
 
     #chart_1 svg, #chart_2 svg, #chart_3 svg {
       max-width: initial;
