@@ -53,7 +53,7 @@ Promise.all([mapaFetch, dataFetch]).then(([barrios, data]) => {
       )
     ],
     style:{
-      fontFamily: 'Tahoma',
+      fontFamily: 'Helvetica',
       fontSize: 14,
       color:'black', 
       padding: '10px',

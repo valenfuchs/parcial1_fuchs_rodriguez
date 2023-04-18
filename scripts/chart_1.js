@@ -47,7 +47,7 @@ d3.dsv(';','/data/147_15-21_junio.csv', d3.autoType).then(data => {
     ],
    
     style:{
-      fontFamily: 'Tahoma',
+      fontFamily: 'Helvetica',
       fontSize: 14,
       color:'black', 
       padding: '10px',

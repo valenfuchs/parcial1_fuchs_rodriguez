@@ -31,7 +31,7 @@ d3.dsv(';','/data/147_vehiculos_mal_estacionados.csv', d3.autoType).then(data =>
         ],
 
         x: {
-          label: 'Fecha de Ingreso',
+          label: " ",
           labelOffset: 40,
         },
       
@@ -46,7 +46,7 @@ d3.dsv(';','/data/147_vehiculos_mal_estacionados.csv', d3.autoType).then(data =>
         },
 
         style:{
-          fontFamily: 'Tahoma',
+          fontFamily: 'Helvetica',
           fontSize: 14,
           color:'black', 
           padding: '10px',
