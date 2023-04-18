@@ -23,7 +23,6 @@ Promise.all([mapaFetch, dataFetch]).then(([barrios, data]) => {
       domain: barrios,
     },
     color: {
-      // Quantize continuo (cant. denuncias) -> discreto (cant. colores)
       type: 'quantize', 
       n: 5,
       scheme: 'bupu',
