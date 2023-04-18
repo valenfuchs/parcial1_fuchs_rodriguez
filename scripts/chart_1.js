@@ -1,4 +1,4 @@
-d3.dsv(';','/data/147_15-21_junio.csv', d3.autoType).then(data => {
+d3.dsv(';','../data/147_15-21_junio.csv', d3.autoType).then(data => {
 
 
   data = d3.groups(data, d => d.prestacion)
@@ -20,18 +20,18 @@ d3.dsv(';','/data/147_15-21_junio.csv', d3.autoType).then(data => {
             fill: d => (d.prestacion == 'VEHÍCULO MAL ESTACIONADO' ? '#701C7F' :  '#B9B7B9'),
             opacity: d => (d.prestacion == 'VEHÍCULO MAL ESTACIONADO' ? 1 :  0.6),
             sort: {y: "x", reverse: true}
+            //quiero poner a 'vehiculo mal estacionado' en negrita o de ultima poner solo el 2015 en negrita pero no puedo :(
           },
         ), 
 
         Plot.text(data, {
           x: 'cant',
           y: 'prestacion',
-          text: 'cant',
+          text: d => `${d.cant}`,
           textAnchor: 'start',
+          fontWeight: 'bold', 
+          fontSize: '18px',
           dx: 5,
-          dy: -5,
-          tickFormat: d3.format(',.0f')
-          
         }),
 
         Plot.axisX({
@@ -54,7 +54,7 @@ d3.dsv(';','/data/147_15-21_junio.csv', d3.autoType).then(data => {
     },
 
     width: 900,
-    height: 500,
+    height: 400,
     marginLeft: 380,
     marginRight: 100,
     marginBottom: 100

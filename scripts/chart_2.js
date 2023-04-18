@@ -1,5 +1,5 @@
-const mapaFetch = d3.json('barrios-caba.geojson')
-const dataFetch = d3.dsv(';', '/data/147_vehiculos_mal_estacionados.csv', d3.autoType)
+const mapaFetch = d3.json('../data/barrios-caba.geojson')
+const dataFetch = d3.dsv(';', '../data/147_vehiculos_mal_estacionados.csv', d3.autoType)
 
 
 Promise.all([mapaFetch, dataFetch]).then(([barrios, data]) => {
@@ -28,6 +28,7 @@ Promise.all([mapaFetch, dataFetch]).then(([barrios, data]) => {
       scheme: 'bupu',
       label: 'Cantidad de denuncias por autos mal estacionados',
       legend: true,
+      fontSize: '30px'   //quiero poner la letra de la referencia mas grande pero no puedo :(
     },
     marks: [
       Plot.geo(barrios, {
@@ -47,8 +48,7 @@ Promise.all([mapaFetch, dataFetch]).then(([barrios, data]) => {
           dx: 4,
           filter: (d) => d.properties.DENUNCIAS > 600,
           fill: 'white',
-          fontSize: d => (d.properties.BARRIO == "PALERMO" ? '16px' :  '11px'),
-          fontWeight: d => (d.properties.BARRIO == 'PALERMO' ? 'bold': 'normal'),
+          fontSize: d => (d.properties.BARRIO == "PALERMO" ? '18px' :  '11px'),
         })
       )
     ],

@@ -1,4 +1,4 @@
-d3.dsv(';','/data/147_vehiculos_mal_estacionados.csv', d3.autoType).then(data => {
+d3.dsv(';','../data/147_vehiculos_mal_estacionados.csv', d3.autoType).then(data => {
 
   filteredData = data.filter(d => d.canal == 'App Denuncia Vial'||d.canal == 'GCS Web'||d.canal == 'Boti'||d.canal == 'App BA 147')
 
@@ -18,16 +18,14 @@ d3.dsv(';','/data/147_vehiculos_mal_estacionados.csv', d3.autoType).then(data =>
             ),
           ),
           
-          Plot.text(filteredData, {
+          Plot.text(filteredData, {   //NO FUNCIONAAAAAAAAAAAA
             x: d => d3.timeParse("%d/%m/%Y")(d.fecha_ingreso),
-            y: 'count',
-            text: d => d.canal,
+            y:'count',
+            text:' d => d.canal',
             textAnchor: 'start',
-            dx: 10,
-            dy: -10,
-            fontSize: 12,
-            fill: 'black',
+            dx: 3,
           }),
+          
         ],
 
         x: {
@@ -57,8 +55,6 @@ d3.dsv(';','/data/147_vehiculos_mal_estacionados.csv', d3.autoType).then(data =>
         marginLeft: 80,
         marginTop: 50,
         marginBottom: 100,
-
-     
       })
 
     d3.select('#chart_3').append(() => chart)
