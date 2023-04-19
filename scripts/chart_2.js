@@ -58,15 +58,17 @@ Promise.all([mapaFetch, dataFetch]).then(([barrios, data]) => {
           dx: 4,
           filter: (d) => d.properties.DENUNCIAS > 600,
           fill: 'white',
-          fontSize: d => (d.properties.BARRIO == "PALERMO" ? '18px' :  '11px'),
+          fontSize: d => (d.properties.BARRIO == "PALERMO" ? '17px' :  '11px'),
         })
       )
     ],
-    style:{
-      fontFamily: 'Helvetica',
-      fontSize: 14,
-      color:'black', 
-    },
+    //style:{
+    //  fontFamily: 'Helvetica',
+    //  fontSize: 14,
+     // color:'black', 
+    //},
+    width: 550,
+    height: 550,
   })
 
   d3.select('#chart_2').append(() => chartMap)

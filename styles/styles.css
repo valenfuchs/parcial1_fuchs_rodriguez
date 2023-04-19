@@ -1,8 +1,29 @@
 
       .box {        
-          border: 1px solid rgb(255, 255, 255);
-          background-color: rgba(234, 234, 234, 0.932);
+          border: 1px solid rgba(238, 238, 238, 0.932);    
+          background-color: rgba(238, 238, 238, 0.932);
       }      
+      .outer{
+        /*list-style-type: none;*/
+        text-align: center;
+        margin: 0;
+        padding: 0;
+        display:flex;
+    }
+    .boton{
+        flex:2;
+        display: inline-block;
+        width: 20%;
+        padding: 10px;
+        text-align: center;    
+        border: 1px solid rgb(198, 198, 198);
+        background-color: rgba(221, 221, 221, 0.932);
+        font-family: font_imperial;
+        font-size: 17px;
+        color: rgb(0, 0, 0);
+        text-align: center;
+    }   
+
 
       p#clima {
         font-family: font_imperial;
@@ -51,7 +72,21 @@
         text-align: center;
       }
 
+      #cuerpo_final {
+        font-family: font_imperial;
+        font-size: 20px;
+        color: rgb(0, 0, 0);
+        text-align: center;
+        margin-bottom: 50px;
+      }
       
+      .abajo {
+        font-family: font_imperial;
+        font-size: 16px;
+        color: rgb(0, 0, 0);
+        text-align: center;
+        padding: 10px;
+      }
 
       @font-face {
       font-family: font_title;
@@ -75,7 +110,15 @@
     }
 
 
-    #chart_1 svg, #chart_2 svg, #chart_3 svg {
+    #chart_1 svg {
+      max-width: initial;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+
+    #chart_2 svg, #chart_3 svg {
       max-width: initial;
       margin-left: auto;
       margin-right: auto;
