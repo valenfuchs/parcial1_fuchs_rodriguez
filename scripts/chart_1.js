@@ -20,7 +20,6 @@ d3.dsv(';','../data/147_15-21_junio.csv', d3.autoType).then(data => {
             fill: d => (d.prestacion == 'VEHÍCULO MAL ESTACIONADO' ? '#701C7F' :  '#B9B7B9'),
             opacity: d => (d.prestacion == 'VEHÍCULO MAL ESTACIONADO' ? 1 :  0.6),
             sort: {y: "x", reverse: true}
-            //quiero poner a 'vehiculo mal estacionado' en negrita o de ultima poner solo el 2015 en negrita pero no puedo :(
           },
         ), 
 
@@ -43,6 +42,7 @@ d3.dsv(';','../data/147_15-21_junio.csv', d3.autoType).then(data => {
         Plot.axisY({
           label: null,
           tickFormat: d => d.charAt(0).toUpperCase() + d.slice(1).toLowerCase(),
+          fontWeight: d => (d.prestacion == 'VEHÍCULO MAL ESTACIONADO' ? 'bold' :  'normal')  //no funciona
         }),
     ],
    
