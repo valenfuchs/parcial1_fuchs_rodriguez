@@ -1,6 +1,7 @@
 d3.dsv(';','../data/147_vehiculos_mal_estacionados.csv', d3.autoType).then(data => {
 
   filteredData = data.filter(d => d.canal == 'App Denuncia Vial'||d.canal == 'GCS Web'||d.canal == 'Boti'||d.canal == 'App BA 147')
+  console.log("filteredData", filteredData)
 
     let chart = Plot.plot({
         marks: [
@@ -18,13 +19,13 @@ d3.dsv(';','../data/147_vehiculos_mal_estacionados.csv', d3.autoType).then(data 
             ),
           ),
           
-          Plot.text(filteredData, {   //NO FUNCIONAAAAAAAAAAAA
+          Plot.text(filteredData, Plot.selectLast({   //NO FUNCIONAAAAAAAAAAAA
             x: d => d3.timeParse("%d/%m/%Y")(d.fecha_ingreso),
             y:'count',
-            text:' d => d.canal',
+            text:  "canal",
             textAnchor: 'start',
             dx: 3,
-          }),          
+          })),          
         ],
 
         x: {
