@@ -1,12 +1,12 @@
 d3.dsv(';','../data/147_15-21_junio.csv', d3.autoType).then(data => {
 
-  filteredData1 = data.filter(d => d.prestacion == 'VEHÍCULO MAL ESTACIONADO')
-  filteredData2 = filteredData1.filter(d => d.canal == 'App Denuncia Vial'||d.canal == 'GCS Web'||d.canal == 'Boti'||d.canal == 'App BA 147')
+  data = data.filter(d => d.prestacion == 'VEHÍCULO MAL ESTACIONADO')
+  filteredData = data.filter(d => d.canal == 'App Denuncia Vial'||d.canal == 'GCS Web'||d.canal == 'Boti'||d.canal == 'App BA 147')
 
     let chart = Plot.plot({
         marks: [
           Plot.ruleY([0]),
-          Plot.line(filteredData2,
+          Plot.line(filteredData,
             Plot.groupX(
               {y: 'count'},
               {
@@ -19,7 +19,7 @@ d3.dsv(';','../data/147_15-21_junio.csv', d3.autoType).then(data => {
             ),
           ),
           
-          Plot.text(filteredData2, Plot.selectLast({   //NO FUNCIONAAAAAAAAAAAA
+          Plot.text(filteredData, Plot.selectLast({   //NO FUNCIONAAAAAAAAAAAA
             x: d => d3.timeParse("%d/%m/%Y")(d.fecha_ingreso),
             y:'count',
             text:  "canal",
@@ -53,7 +53,7 @@ d3.dsv(';','../data/147_15-21_junio.csv', d3.autoType).then(data => {
         },
 
         width: 700,
-        height: 400,
+        height: 350,
         marginLeft: 80,
         marginTop: 50,
         marginBottom: 20,

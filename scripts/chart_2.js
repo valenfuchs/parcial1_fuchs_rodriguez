@@ -1,12 +1,12 @@
 const mapaFetch = d3.json('../data/barrios-caba.geojson')
-const dataFetch = d3.dsv(';', '../data/147_vehiculos_mal_estacionados.csv', d3.autoType)
+const dataFetch = d3.dsv(';', '../data/147_15-21_junio.csv', d3.autoType)
 
 
 Promise.all([mapaFetch, dataFetch]).then(([barrios, data]) => {
   
+  data = data.filter(d => d.prestacion == 'VEHÍCULO MAL ESTACIONADO')
   const reclamosPorBarrio = d3.group(data, d => d.domicilio_barrio)
   console.log('reclamosPorBarrio', reclamosPorBarrio)
-   
 
    barrios.features.forEach(d => {
      let nombreBarrio = d.properties.BARRIO
@@ -44,17 +44,14 @@ Promise.all([mapaFetch, dataFetch]).then(([barrios, data]) => {
           text: (d) => d.properties.BARRIO,
           textAnchor: "center",
           dx: 4,
-          filter: (d) => d.properties.DENUNCIAS > 600,
+          filter: (d) => d.properties.DENUNCIAS > 150,
           fill: 'white',
-          fontSize: d => (d.properties.BARRIO == "PALERMO" ? '17px' :  '11px'),
+          fontSize: d => (d.properties.BARRIO == "PALERMO" ? '17px' :  '10px'),
+          fontWeight: 'bold'
         })
       )
     ],
-    //style:{
-    //  fontFamily: 'Helvetica',
-    //  fontSize: 14,
-     // color:'black', 
-    //},
+
     width: 550,
     height: 550,
   })

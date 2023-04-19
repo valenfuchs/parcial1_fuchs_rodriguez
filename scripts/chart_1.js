@@ -53,9 +53,9 @@ d3.dsv(';','../data/147_15-21_junio.csv', d3.autoType).then(data => {
       padding: '10px',
     },
 
-    width: 900,
-    height: 350,
-    marginLeft: 380,
+    width: 800,
+    height: 300,
+    marginLeft: 270,
     marginRight: 100,
     marginBottom: 0,
     })

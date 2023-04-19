@@ -1,7 +1,7 @@
 
     .box {        
           border: 1px solid rgba(238, 238, 238, 0.932);    
-          background-color: rgba(238, 238, 238, 0.932);
+          background-color: rgba(238, 238, 238, 0.468);
     }      
     .outer{
         text-align: center;
@@ -25,10 +25,8 @@
     .boton:hover{
         background-color: rgb(221, 220, 220);
     }
-    
-
-
-      p#clima {
+  
+    p#clima {
         font-family: font_imperial;
         font-size: 15px;
         color: rgb(0, 0, 0);
@@ -89,7 +87,7 @@
         font-family: font_imperial;
         font-size: 16px;
         color: rgb(111, 111, 111);
-        text-align: center;
+        text-align: left;
         line-height: 23px; 
         max-width: 750px;
         margin:auto;
