@@ -30,7 +30,7 @@ d3.dsv(';','../data/147_15-21_junio.csv', d3.autoType).then(data => {
           text: d => `${d.cant}`,
           textAnchor: 'start',
           fontWeight: 'bold', 
-          fontSize: '18px',
+          fontSize: '16px',
           dx: 5,
         }),
 
@@ -48,16 +48,16 @@ d3.dsv(';','../data/147_15-21_junio.csv', d3.autoType).then(data => {
    
     style:{
       fontFamily: 'Helvetica',
-      fontSize: 14,
+      fontSize: 16,
       color:'black', 
       padding: '10px',
     },
 
     width: 900,
-    height: 400,
+    height: 350,
     marginLeft: 380,
     marginRight: 100,
-    marginBottom: 100
+    marginBottom: 0,
 
 
     })

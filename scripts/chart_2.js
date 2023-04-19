@@ -27,8 +27,18 @@ Promise.all([mapaFetch, dataFetch]).then(([barrios, data]) => {
       n: 5,
       scheme: 'bupu',
       label: 'Cantidad de denuncias por autos mal estacionados',
+      /*legend:{
+        fontSize: '30px',
+       },
+       */
+      /*
+       legend: {
+        itemStyle: {
+           fontSize:'35px',
+        },},
+        */
       legend: true,
-      fontSize: '30px'   //quiero poner la letra de la referencia mas grande pero no puedo :(
+      //quiero poner la letra de la referencia mas grande pero no puedo :(
     },
     marks: [
       Plot.geo(barrios, {
@@ -56,7 +66,6 @@ Promise.all([mapaFetch, dataFetch]).then(([barrios, data]) => {
       fontFamily: 'Helvetica',
       fontSize: 14,
       color:'black', 
-      padding: '10px',
     },
   })
 
