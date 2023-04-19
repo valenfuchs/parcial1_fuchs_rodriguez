@@ -158,11 +158,9 @@
 
 
     #chart_1 svg {
-      max-width: initial;
-      margin-left: auto;
-      margin-right: auto;
-      margin-top: 0;
-      margin-bottom: 0;
+      margin: auto;
+      position: relative;
+      justify-content: center;
     }
 
     #chart_2 svg, #chart_3 svg {
