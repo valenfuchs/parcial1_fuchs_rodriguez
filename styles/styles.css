@@ -50,7 +50,14 @@
         color: rgb(0, 0, 0);
         margin: 10px;
         margin-top: -20px;
-        
+      }
+      p#nombre_mini {
+        font-family: font_title;
+        text-align: center;
+        font-size: 32px;
+        color: rgb(0, 0, 0);
+        margin: 7px;
+        margin-top: 5px;
       }
       p#titulo {
         margin-top: 60px;
@@ -94,7 +101,6 @@
         font-size: 16px;
         color: rgb(111, 111, 111);
         text-align: center;
-        
         line-height: 23px; 
         font-weight: bold;
       }
@@ -112,9 +118,12 @@
 
       #cuerpo_final {
         font-family: font_imperial;
-        font-size: 20px;
-        color: rgb(0, 0, 0);
+        font-size: 16px;
+        color: rgb(111, 111, 111);
         text-align: center;
+        line-height: 23px; 
+        max-width: 750px;
+        margin:auto;
         margin-bottom: 50px;
       }
       
