@@ -24,19 +24,20 @@ d3.dsv(';','../data/147_vehiculos_mal_estacionados.csv', d3.autoType).then(data 
             text:' d => d.canal',
             textAnchor: 'start',
             dx: 3,
-          }),
-          
+          }),          
         ],
 
         x: {
           label: " ",
           labelOffset: 40,
-        },
-      
+          ticks: 5,
+        },    
+        
         y: {
           label: 'Cantidad de Reclamos',
           labelOffset: 40,
-          grid: true
+          grid: true,
+          ticks: 5,
         },
 
         color: {
@@ -51,7 +52,7 @@ d3.dsv(';','../data/147_vehiculos_mal_estacionados.csv', d3.autoType).then(data 
         },
 
         width: 700,
-        height: 500,
+        height: 400,
         marginLeft: 80,
         marginTop: 50,
         marginBottom: 20,
