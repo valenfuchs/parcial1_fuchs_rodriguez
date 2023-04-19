@@ -57,6 +57,7 @@ d3.dsv(';','../data/147_15-21_junio.csv', d3.autoType).then(data => {
     height: 350,
     marginLeft: 380,
     marginRight: 100,
+    marginBottom: 0,
     })
 
     d3.select('#chart_1').append(() => chart)

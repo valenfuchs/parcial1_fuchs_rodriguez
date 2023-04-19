@@ -26,19 +26,7 @@ Promise.all([mapaFetch, dataFetch]).then(([barrios, data]) => {
       type: 'quantize', 
       n: 5,
       scheme: 'bupu',
-      label: 'Cantidad de denuncias por autos mal estacionados',
-      /*legend:{
-        fontSize: '30px',
-       },
-       */
-      /*
-       legend: {
-        itemStyle: {
-           fontSize:'35px',
-        },},
-        */
       legend: true,
-      //quiero poner la letra de la referencia mas grande pero no puedo :(
     },
     marks: [
       Plot.geo(barrios, {
