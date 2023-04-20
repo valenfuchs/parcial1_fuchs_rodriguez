@@ -30,19 +30,22 @@ d3.dsv(';','../data/147_15-21_junio.csv', d3.autoType).then(data => {
           textAnchor: 'start',
           fontWeight: 'bold', 
           fontSize: '16px',
+          fill: d => (d.cant == 2015 ? '#701C7F' :  '#B9B7B9'),
           dx: 5,
         }),
 
         Plot.axisX({
           label:null,
           tickFormat: null,
-          color: 'white'
+          color: 'white',
+          fontWeight: 'bold'
         }),
 
         Plot.axisY({
           label: null,
           tickFormat: d => d.charAt(0).toUpperCase() + d.slice(1).toLowerCase(),
-          fontWeight: d => (d.prestacion == 'VEHÍCULO MAL ESTACIONADO' ? 'bold' :  'normal')  //no funciona
+          fontWeight: 'bold',
+          fill: d => (d.prestacion == 'VEHÍCULO MAL ESTACIONADO' ? '#701C7F' :  '#B9B7B9')
         }),
     ],
    
