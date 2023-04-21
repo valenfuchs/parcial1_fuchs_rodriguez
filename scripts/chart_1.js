@@ -43,9 +43,11 @@ d3.dsv(';','../data/147_15-21_junio.csv', d3.autoType).then(data => {
 
         Plot.axisY({
           label: null,
-          tickFormat: d => d.charAt(0).toUpperCase() + d.slice(1).toLowerCase(),
+          tickFormat: d => d.charAt(0).toUpperCase() + d.slice(1).toLowerCase(), 
+          tickLength: 50,  
+          padding: 50,       
           fontWeight: 'bold',
-          fill: d => (d.prestacion == 'VEHÍCULO MAL ESTACIONADO' ? '#701C7F' :  '#B9B7B9')
+          color: d => (d.prestacion == 'VEHÍCULO MAL ESTACIONADO' ? '#701C7F' :  '#B9B7B9'),
         }),
     ],
    
@@ -61,6 +63,21 @@ d3.dsv(';','../data/147_15-21_junio.csv', d3.autoType).then(data => {
     marginLeft: 270,
     marginRight: 100,
     marginBottom: 0,
+
+    options:{
+      scales:{
+        y: {
+          grid:{
+            tickLength: 0,
+            drawTicks: false,
+          },
+          ticks:{
+            padding:0,
+          }
+        }
+      }
+    }
+
     })
 
     d3.select('#chart_1').append(() => chart)

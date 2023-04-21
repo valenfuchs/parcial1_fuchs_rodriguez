@@ -19,13 +19,20 @@ d3.dsv(';','../data/147_15-21_junio.csv', d3.autoType).then(data => {
             ),
           ),
           
-          Plot.text(filteredData, Plot.selectLast({   //NO FUNCIONAAAAAAAAAAAA
-            x: d => d3.timeParse("%d/%m/%Y")(d.fecha_ingreso),
-            y:'count',
-            text:  "canal",
-            textAnchor: 'start',
-            dx: 3,
-          })),          
+          Plot.text(filteredData,
+            Plot.selectLast(
+              Plot.groupX(
+                { y: 'count' },
+                {
+                  x: d => d3.timeParse('%d/%m/%Y')(d.fecha_ingreso),
+                  text: d => {
+                    return d[0].canal // tomo uno de los reclamos del grupo
+                  },
+                  fill: 'canal',
+                  textAnchor: 'start',
+                  dx: 3,
+              })),
+          ),        
         ],
 
         x: {
@@ -49,14 +56,12 @@ d3.dsv(';','../data/147_15-21_junio.csv', d3.autoType).then(data => {
           fontFamily: 'Helvetica',
           fontSize: 14,
           color:'black', 
-          padding: '10px',
+          //padding: '10px',
         },
 
-        width: 700,
+        width: 600,
         height: 350,
-        marginLeft: 80,
-        marginTop: 50,
-        marginBottom: 20,
+        insetRight:70,
       })
 
     d3.select('#chart_3').append(() => chart)
