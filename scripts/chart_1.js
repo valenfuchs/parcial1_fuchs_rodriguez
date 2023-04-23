@@ -45,9 +45,10 @@ d3.dsv(';','../data/147_15-21_junio.csv', d3.autoType).then(data => {
           label: null,
           tickFormat: d => d.charAt(0).toUpperCase() + d.slice(1).toLowerCase(), 
           tickLength: 50,  
+          tickSize: 0,
           padding: 50,       
           fontWeight: 'bold',
-          color: d => (d.prestacion == 'VEHÍCULO MAL ESTACIONADO' ? '#701C7F' :  '#B9B7B9'),
+          // fill: d => (d.prestacion == 'VEHÍCULO MAL ESTACIONADO' ? '#701C7F' :  '#B9B7B9'),
         }),
 
     ],
