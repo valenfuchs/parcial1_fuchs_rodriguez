@@ -1,7 +1,7 @@
 
     .box {        
           border: 1px solid rgba(238, 238, 238, 0.932);    
-          background-color: rgba(238, 238, 238, 0.468);
+          background-color: rgb(255, 255, 255);
     }      
     .outer{
         text-align: center;
@@ -15,8 +15,8 @@
         width: 20%;
         padding: 10px;
         text-align: center;    
-        border: 1px solid rgb(198, 198, 198);
-        background-color: rgba(231, 229, 229, 0.932);
+        border: 1px solid rgb(255, 255, 255);
+        background-color: rgba(180, 131, 190, 0.53);
         font-family: font_imperial;
         font-size: 16px;
         color: rgb(0, 0, 0);
@@ -44,7 +44,7 @@
       p#nombre {
         font-family: font_title;
         text-align: center;
-        font-size: 60px;
+        font-size: 70px;
         color: rgb(0, 0, 0);
         margin: 10px;
         margin-top: -20px;
