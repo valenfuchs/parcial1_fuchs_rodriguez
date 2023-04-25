@@ -1,22 +1,22 @@
 @font-face {
   font-family: font_title;
-  src: url('./tipografias/Ancient Medium.ttf');
+  src: url('../tipografias/Ancient Medium.ttf');
 }
   @font-face {
   font-family: font_body;
-  src: url('./tipografias/Cheltenham BT.ttf');
+  src: url('../tipografias/Cheltenham BT.ttf');
 }
   @font-face {
   font-family: font_italic;
-  src: url('./tipografias/Cheltenhm BT Italic.ttf');
+  src: url('../tipografias/Cheltenhm BT Italic.ttf');
 }
   @font-face {
   font-family: font_bold_italic;
-  src: url('./tipografias/Cheltenham Bold Italic Headline BT.ttf');
+  src: url('../tipografias/Cheltenham Bold Italic Headline BT.ttf');
 }
   @font-face {
   font-family: font_imperial;
-  src: url('./tipografias/Imperial Regular.otf');
+  src: url('../tipografias/Imperial Regular.otf');
 }
 
 
