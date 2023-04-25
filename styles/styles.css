@@ -1,8 +1,11 @@
 
-    .box {        
+    .box_arriba {        
         border: 1px solid rgba(238, 238, 238, 0.932);    
         background-color: rgb(255, 255, 255);
-    
+    }      
+    .box_abajo {        
+        border: 1px solid rgba(238, 238, 238, 0.932);    
+        background-color: rgba(211, 211, 211, 0.219);
     }      
     .outer{
         text-align: center;
