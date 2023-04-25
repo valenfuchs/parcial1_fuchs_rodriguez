@@ -1,7 +1,8 @@
 
     .box {        
-          border: 1px solid rgba(238, 238, 238, 0.932);    
-          background-color: rgb(255, 255, 255);
+        border: 1px solid rgba(238, 238, 238, 0.932);    
+        background-color: rgb(255, 255, 255);
+    
     }      
     .outer{
         text-align: center;
@@ -23,7 +24,7 @@
         text-align: center;
     }   
     .boton:hover{
-        background-color: rgb(221, 220, 220);
+        background-color: rgba(140, 65, 155, 0.53);
     }
   
     p#clima {
