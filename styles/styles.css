@@ -17,14 +17,14 @@
         padding: 10px;
         text-align: center;    
         border: 1px solid rgb(255, 255, 255);
-        background-color: rgba(180, 131, 190, 0.53);
+        background-color: rgba(174, 207, 235, 0.648);
         font-family: font_imperial;
         font-size: 16px;
         color: rgb(0, 0, 0);
         text-align: center;
     }   
     .boton:hover{
-        background-color: rgba(140, 65, 155, 0.53);
+        background-color: rgba(145, 194, 224, 0.635);
     }
   
     p#clima {
