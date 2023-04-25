@@ -1,4 +1,4 @@
-d3.dsv(';','../data/147_15-21_junio.csv', d3.autoType).then(data => {
+d3.dsv(';','data/147_15-21_junio.csv', d3.autoType).then(data => {
 
 
   data = d3.groups(data, d => d.prestacion)

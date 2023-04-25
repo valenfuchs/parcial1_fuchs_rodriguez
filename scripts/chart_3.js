@@ -1,4 +1,4 @@
-d3.dsv(';','../data/147_15-21_junio.csv', d3.autoType).then(data => {
+d3.dsv(';','data/147_15-21_junio.csv', d3.autoType).then(data => {
 
   data = data.filter(d => d.prestacion == 'VEHÍCULO MAL ESTACIONADO')
   filteredData = data.filter(d => d.canal == 'App Denuncia Vial'||d.canal == 'GCS Web'||d.canal == 'Boti'||d.canal == 'App BA 147')
