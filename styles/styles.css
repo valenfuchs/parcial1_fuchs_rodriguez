@@ -1,5 +1,26 @@
+@font-face {
+  font-family: font_title;
+  src: url('./tipografias/Ancient Medium.ttf');
+}
+  @font-face {
+  font-family: font_body;
+  src: url('./tipografias/Cheltenham BT.ttf');
+}
+  @font-face {
+  font-family: font_italic;
+  src: url('./tipografias/Cheltenhm BT Italic.ttf');
+}
+  @font-face {
+  font-family: font_bold_italic;
+  src: url('./tipografias/Cheltenham Bold Italic Headline BT.ttf');
+}
+  @font-face {
+  font-family: font_imperial;
+  src: url('./tipografias/Imperial Regular.otf');
+}
 
-    .box_arriba {        
+
+.box_arriba {        
         border: 1px solid rgba(238, 238, 238, 0.932);    
         background-color: rgb(255, 255, 255);
     }      
@@ -137,26 +158,7 @@
         padding: 10px;
       }
 
-      @font-face {
-      font-family: font_title;
-      src: url('/tipografias/Ancient Medium.ttf');
-    }
-      @font-face {
-      font-family: font_body;
-      src: url('/tipografias/Cheltenham BT.ttf');
-    }
-      @font-face {
-      font-family: font_italic;
-      src: url('/tipografias/Cheltenhm BT Italic.ttf');
-    }
-      @font-face {
-      font-family: font_bold_italic;
-      src: url('/tipografias/Cheltenham Bold Italic Headline BT.ttf');
-    }
-      @font-face {
-      font-family: font_imperial;
-      src: url('/tipografias/Imperial Regular.otf');
-    }
+
 
 
     #chart_1 svg {
